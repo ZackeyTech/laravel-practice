@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    CircleCi for Laravel form ZACKEY
                 </div>
 
                 <div class="links">
