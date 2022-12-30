@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  deploy:
+    machine:
+      enabled: true
+    # steps:
+    #   - add_ssh_keys:
+    #       fingerprints:
+    #         - "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    #   - run: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "/var/www/リポジトリ名/deploy.sh"
+
+workflows:
+  version: 2.1
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: main
