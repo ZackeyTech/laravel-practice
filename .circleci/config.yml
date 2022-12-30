@@ -7,7 +7,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "6a:a2:0e:85:50:87:dc:c1:93:f5:b2:77:75:39:21:45"
-      - run: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "~/production/laravel-practice/deploy_laravel-practice.sh"
+      - run: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "/production/laravel-practice/deploy_laravel-practice.sh"
 
 workflows:
   version: 2.1
