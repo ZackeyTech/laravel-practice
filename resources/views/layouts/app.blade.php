@@ -10,14 +10,22 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    @if(env('APP_ENV') === 'production')
+        <script src="{{ asset('js/app.js', true) }}" defer></script>
+    @else
+        <script src="{{ asset('js/app.js', false) }}" defer></script>
+    @endif
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @if(env('APP_ENV') === 'production')
+        <link href="{{ asset('css/app.css', true) }}" rel="stylesheet">
+    @else
+        <link href="{{ asset('css/app.css', false) }}" rel="stylesheet">
+    @endif
 </head>
 <body>
     <div id="app">
